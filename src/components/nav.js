@@ -13,7 +13,7 @@ class DropDown extends Component {
       <div className="menu">
         <label>Show</label>
         <select onChange={this.onChange}>
-          <option value="">Small</option>
+          <option value="/">Small</option>
           <option value="medium">Medium</option>
           <option value="large">Large</option>
         </select>

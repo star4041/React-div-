@@ -8,7 +8,8 @@ const Table = ({ data }) => {
 
         <table cellPadding={10} cellSpacing={10} style={{width:'100%'}}>
          <thead>
-            <tr style={{background:'beige'}}>{data[0] && columns.map((heading) => <th>{heading}</th>)}</tr>
+            <tr style={{background: 'linear-gradient(to right, #ff5858, #f857a6)'
+}}>{data[0] && columns.map((heading) => <th>{heading}</th>)}</tr>
          </thead>
          <tbody>
             {data.map(row => <tr>
