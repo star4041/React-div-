@@ -17,10 +17,12 @@ const Large = () => {
   }, []);
 
   const search= (rows) => {
-    return rows.filter
-    (row => row.firstName.toLowerCase().indexOf(q) > -1) ||
-    (row => row.lastName.toLowerCase().indexOf(q) > -1) 
+    const columns = rows[0] && Object.keys(rows[0]);
+    return rows.filter((row) => 
+  
+    columns.some((column) => row[column].toLowerCase().indexOf(q.toLowerCase()) > -1)
     
+    );
   }
 
   return (
@@ -28,7 +30,7 @@ const Large = () => {
      <div>
        <input className="input_tab" type="text" value={q} onChange={(e) => setQ(e.target.value)} placeholder="search"  />
      </div>
-     <div>
+     <div className='responsive'>
        <Table data={search(data)} />
      </div>
     </div>
