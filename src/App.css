@@ -72,36 +72,64 @@ select {
   }
 }
 .input_tab {
-	padding: 12px 0px;
-	border-radius: 10pc;
-	background: #b993d6;
-	background: linear-gradient(to right, #8ca6db, #b993d6);
-	color: white;
-	box-shadow: none;
-	outline-width: 0;
-	text-align: center;
-	font-size: 18px;
-	position: absolute;
-	top: 0.3%;
-	border: none;
-	left: 70%;
-}
-
-th {
+  padding: 12px 0px;
+  border-radius: 10pc;
+  background: #b993d6;
+  background: linear-gradient(to right, #8ca6db, #b993d6);
   color: white;
+  box-shadow: none;
+  outline-width: 0;
+  text-align: center;
+  font-size: 18px;
+  position: absolute;
+  top: 0.3%;
+  border: none;
+  left: 70%;
 }
 
-tr:nth-child(even) {
-	background-color: #dddddd2e;
-}
-tr:nth-child(odd) {
-	background-color: #00fff31f;
+@media screen and (max-width: 768px) {
+  .input_tab {
+    position: unset;
+    margin-top: 10px;
+  }
 }
 
+/* TABLE CSS  */
 
-@media screen and (max-width:768px){
-    .input_tab {
-        position: unset;
-        margin-top: 10px ;
-    }
+.Table {
+  display: table;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.TableRow {
+  display: table-row;
+}
+.TableHeading {
+  display: table-header-group;
+  background-color: #ddd;
+}
+.TableCell,
+.TableHead {
+  display: table-cell;
+  padding: 15px 10px;
+  border: 5px solid white;
+}
+.TableHeading {
+  display: table-header-group;
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+.TableRow:nth-child(odd) {
+  background-color: #00fff31f;
+}
+
+.TableRow:nth-child(even) {
+  background-color: #dddddd2e;
+}
+
+.TableHead {
+  font-weight: bold;
+  color: white;
 }
