@@ -1,4 +1,4 @@
-# Live URL : https://datatable-react.netlify.app/large
+# Live URL : https://datatable-react.netlify.app
 
 # Getting Started with Create React App
 
